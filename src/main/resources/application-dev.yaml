@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: szxy
+    password: szxy
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+pathconfig:
+  PATH: d:/addSoft/apache-tomcat-7.0.65-windows-x64/apache-tomcat-7.0.65/webapps/ROOT/photo/szxy/
+  URL: http://127.0.0.1:8888/photo/szxy/

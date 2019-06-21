@@ -1,0 +1,88 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    min-width: 1366px;
+    min-height: 768px;
+
+}
+body{
+    margin: 0;
+    background-size: cover;
+    font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+}
+.container{
+    width: 1500px;
+    margin: 0 auto;
+}
+.head{
+    height:100%;
+}
+.middle{
+    width: 100%;
+}
+.top_2{
+    margin-top: 10px;
+    width: 100%;
+    height: 54px;
+    background: #E3F1F9;
+}
+.top_3{
+    width: 100%;
+    height: 150px;
+    background: #D1EAF4;
+}
+.top_4{
+    width: 100%;
+    height: 60px;
+    border: 1px silver solid;
+    float: left;
+}
+.test{
+    margin-left: 20px;
+    margin-top: 20px;
+    width:600px;
+    height: 50px;
+    float: left;
+}
+.topic{
+    width: 100%;
+    height: 800px;
+    border: 1px solid silver;
+}
+tr{
+    width:100%;
+    height:40px
+}
+td{
+    text-align: center;
+}
+.page1{
+    width: 100%;
+    height: 80px;
+    border: 1px solid silver;
+    border-top: none;
+}
+.htk{
+    display: none;
+    position: absolute;
+    top:200px;
+    left: 600px;
+    z-index: 1000;
+    width: 600px;
+    height: 400px;
+    border:1px silver solid;
+    background-image: url("../img/sky.png");
+}
+.reply{
+    cursor: pointer;
+}
+.ht_div{
+    width:400px;
+    height:200px;
+    margin-left: 100px;
+}
+.ht_al{
+    margin-top: 50px;
+    margin-left: 350px;
+}
+

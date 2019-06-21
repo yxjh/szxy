@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宿州学院闲置物品交易商城</title>
+    <link rel="stylesheet" href="tribune/css/tribune.css">
+    <link rel="stylesheet" href="index/css/paging.css">
+</head>
+<body>
+    <div class="container">
+        <!--头部位置-->
+        <div class="head"></div>
+        <div class="middle">
+            <!--图片位置-->
+            <div class="top_1">
+                <div class="top_2">
+                    <div style="float: left" class="search_left"><input class="topicKey" type="text" style="width:300px;height: 40px;margin-left: 20px;margin-top: 4px"></div>
+                    <div style="float: left" class="search_right"><input class="searchReply" type="submit" value="搜索" style="width:90px;height: 44px;margin-left: 150px;margin-top: 4px;background-color: #366DB5;color: white"></div>
+                    <div style="float: left" class="search_left"><textarea class="area" style="width:300px;height: 40px;margin-left: 200px;margin-top: 4px"></textarea></div>
+                    <div style="float: left" class="search_right"><input class="topic" type="submit" value="发帖" style="width:90px;height: 44px;margin-left: 150px;margin-top: 4px;background-color: #366DB5;color: white"></div>
+                </div>
+                <div class="top_3">
+                    <img src="tribune/img/school.png" style="height: 120px; margin-top:16px;width:1460px;margin-left: 20px">
+                </div>
+                <div class="top_4">
+                    <div style="float: left"><img src="tribune/img/title.png" style="width:50px;height: 50px"></div>
+                    <div class="test">今日：<span class="num1"></span>      |       昨日：<span class="num2"></span>        |       帖子：<span class="num3"></span>     |     用户：<span class="num4">lisi</span></div>
+                </div>
+            </div>
+            <!--中间位置-->
+            <div class="location">
+                <div class="topic">
+                    <table style="width:100%">
+                        <th>序号</th><th>内容</th><th>作者</th><th>回帖量</th><th>最后回帖人</th><th>回帖</th>
+                        <tbody class="list"></tbody>
+                    </table>
+                </div>
+                <div class="page1">
+                    <div id="page" class="page_div" style="float: right"></div>
+                </div>
+            </div>
+        </div>
+        <!--底部位置-->
+        <div class="button"><img src="index/img/button.png" style="width: 100%;height: 100px; border: 1px solid silver;"></div>
+    </div>
+
+    <!--回帖框-->
+    <div class="htk">
+        <input type="hidden" class="ycxh">
+        <div style="width:600px;height: 60px;color: hotpink;font-size: 40px">愉快的发帖吧-_-<span style="float:right;cursor: pointer;" class="del"><img src="tribune/img/delete.png"></span></div>
+        <div class="ht_div"><textarea class="htnr" style="width:400px;height:200px"></textarea></div>
+        <div class="ht_al"><input type="submit" class="ht" value="回帖" style="width:90px;height: 44px;margin-left: 150px;margin-top: 4px;background-color: #366DB5;color: white" ></div>
+    </div>
+
+</body>
+<script src="index/js/jquery-1.11.3.min.js"></script>
+<script src="index/js/paging.js"></script>
+<script src="tribune/js/tribune.js"></script>
+<script src="top/js/top.js"></script>
+<!--<script>
+    $('.head').load("top.html")
+</script>-->
+<script>
+    $('.num4').text(localStorage.getItem("name"));
+</script>
+</html>

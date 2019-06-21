@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<link href="hqj/hqj.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	
+	<script type="text/javascript" src="js/jq.snow.js"></script>
+	<script type="text/javascript" src="hqj/hqj.js"></script>
+</head> 
+
+<body background="a/shan1.jpg">
+<!--下面是调用方法和参数说明-->
+	<script>
+	$(function(){
+		$.fn.snow({ 
+			minSize: 5,		
+			maxSize: 50, 	
+			newOn: 150
+		});
+	});
+	</script>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="top">
+				<div><select style="width:40px;height: 40px" onchange="zt(this)"><option value="1">a</option><option value="" onclick="zt(this)">b</option><option value="" onclick="zt(this)">c</option><option value="" onclick="zt(this)">d</option></select></div>
+				<div><select><option value="">1</option><option value="">2</option><option value="">3</option><option value="">4</option></select></div>
+			</div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2010, 06, -32);
+		together.setHours(00);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+	<audio id="bgmMusic" src="music/a.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
+</body>
+</html>

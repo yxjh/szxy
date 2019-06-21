@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="home/css/home.css">
+<style>
+    table tbody {
+        text-align: center;
+        width:1339px;
+        display:block;
+        overflow-y:scroll;
+        height: 500px;
+    }
+    table thead,th tbody tr {
+        display:table;
+        table-layout:fixed;
+    }
+</style>
+<body>
+<div class="right_top">
+    <div class="upload" style="float: left;margin-left: 1150px;cursor: pointer;"><img src="home/img/upload.png"></div>
+    <div class="excel" style="float: left;margin-left: 60px;cursor: pointer;"><img src="home/img/excel.png"></div>
+</div>
+<div class="right_button" style="margin-top: 20px">
+    <table>
+        <thead><th>序号</th><th>发帖人</th><th style="width: 400px">发帖内容</th><th>发帖时间</th><th style="width:140px">回帖人</th><th style="width: 310px">回帖内容</th><th style="width:300px">回帖时间</th></thead>
+        <tbody class="replyList"></tbody>
+    </table>
+</div>
+</body>
+<script src="index/js/jquery-3.2.1.min.js"></script>
+<script src="home/js/home.js"></script>
+</html>

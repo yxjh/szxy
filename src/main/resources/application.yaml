@@ -1,0 +1,12 @@
+server:
+  port: 9999
+spring:
+  profiles:
+    active: dev
+  http:
+      multipart:
+        enabled: true
+        max-file-size: 2048MB
+        max-request-size: 102400MB
+  thymeleaf:
+    mode: LEGACYHTML5

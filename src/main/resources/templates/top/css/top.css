@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    background-size: cover;
+    font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+}
+.top{
+    margin: 0 auto;
+    height:85px;
+}
+.title{
+    width:500px;
+    height:85px;
+    float: left;
+}
+.dtu{
+    width:500px;
+    height:85px;
+    float: left;
+//background: url(../img/head.gif) left top no-repeat;
+}
+.time{
+    height: 85px;
+    width: 500px;
+    float: left;
+}
+.time1{
+    height: 40px;
+    width: 240px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+.time2{
+    height: 25px;
+    width: 550px;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+.time2 a{
+    color: #999;
+    text-decoration: none;
+}

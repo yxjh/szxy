@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="home/css/home.css">
+<style>
+    table tbody {
+        text-align: center;
+        width:1339px;
+        display:block;
+        overflow-y:scroll;
+        height: 222px;
+    }
+
+    table thead,th tbody tr {
+        display:table;
+        table-layout:fixed;
+    }
+</style>
+<body>
+<div class="right_top">
+    <div class="upload" style="float: left;margin-left: 1150px;cursor: pointer;"><img src="home/img/upload.png"></div>
+    <div class="excel" style="float: left;margin-left: 60px;cursor: pointer;"><img src="home/img/excel.png"></div>
+</div>
+<div class="right_button" style="margin-top: 20px">
+    我收到的留言:
+    <div class="toLy" style="width: 100%;height: 250px">
+        <table>
+            <thead><th >序号</th><th style="width: 166px">发布人</th><th style="width: 220px">发布物品</th><th style="width: 355px">意向交换物品</th><th style="width: 145px">留言人</th><th style="width: 200px">留言时间</th><th style="width: 200px">确定交易</th></thead>
+            <tbody class="toLyList"></tbody>
+        </table>
+    </div>
+    <hr>
+    我发布的留言:
+    <div class="fromLy">
+        <table>
+            <thead><th >序号</th><th style="width: 166px">发布人</th><th style="width: 220px">发布物品</th><th style="width: 355px">意向交换物品</th><th style="width: 145px">留言人</th><th style="width: 400px">留言时间</th></thead>
+            <tbody class="fromLyList" style="width: 100%;height: 260px;overflow:auto"></tbody>
+        </table>
+    </div>
+    <div class="toLy"></div>
+</div>
+</body>
+<script src="index/js/jquery-3.2.1.min.js"></script>
+<script src="home/js/home.js"></script>
+</html>

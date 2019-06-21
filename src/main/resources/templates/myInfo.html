@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="home/css/home.css">
+<body>
+<div class="right_top">
+    <div class="upload" style="float: left;margin-left: 1150px;cursor: pointer;"><img src="home/img/upload.png"></div>
+    <div class="excel" style="float: left;margin-left: 60px;cursor: pointer;"><img src="home/img/excel.png"></div>
+</div>
+<div class="right_button" style="margin-top: 20px">
+
+    <div class="allInfo">
+        <form id="form1">
+        <div class="myInfo">
+            <div class="infoGs"><input type="hidden" name="xh" class="myXh"></div>
+            <div class="infoGs">姓名:<input type="text" name="name" class="myName"></div>
+            <div class="infoGs">密码:<input type="password" name="password" readonly="readonly" class="myPassword"></div>
+            <div class="infoGs">昵称:<input type="text" name="nc" class="myNc"></div>
+            <div class="infoGs">邮箱:<input type="text" name="email" class="myEmail"></div>
+            <div class="infoGs">生日:<input type="text" name="birthday" class="myBirthday"></div>
+            <div class="infoGs">我的:<input type="file" name="file" class="file1"  multiple="multiple"></div>
+            <div><img src="home/img/edit.png" style="cursor: pointer;margin-top: 10px;margin-left: 460px"class="edit"></div>
+</div>
+        </form>
+        <div class="myPhoto">
+            <img style="border:1px white solid;width: 200px;height: 200px" src="" class="mytp">
+            <div  style="margin-top: 20px"><span class="myName1"></span> <span class="myBirthday1"></span></div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="index/js/jquery-3.2.1.min.js"></script>
+<script src="home/js/home.js"></script>
+</html>

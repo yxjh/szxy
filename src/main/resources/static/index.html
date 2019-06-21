@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宿州学院闲置物品交易商城</title>
+    <link rel="stylesheet" href="index/css/style.css">
+    <link rel="stylesheet" href="index/css/index.css">
+    <link rel="stylesheet" href="index/css/jquery-ui-1.9.2.custom.css" type="text/css">
+    <link rel="stylesheet" href="index/css/paging.css">
+</head>
+<body>
+<div class="container">
+    <!--头部位置-->
+    <div class="head"></div>
+    <!--中间位置-->
+    <div class="middle">
+        <div class="left">
+            <div class="left_top">
+                <div class="text4">
+                    <div><img src="index/img/laba.gif" style="height: 55px;float: left"></div>
+                    <div style="margin-left: 10px;font-size: 45px; float: left">校园最热评论.....</div>
+                </div>
+                <div class="speak myscroll">
+                    <ul class="titleList"></ul>
+                </div>
+            </div>
+            <div class="left_button">
+                <div class="text4">
+                    <div><img src="index/img/jiaoyi.png" style="height: 55px;float: left"></div>
+                    <div style="margin-left: 10px;font-size: 45px; float: left">物品周发布情况</div>
+                </div>
+                <div id="main1"></div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center_top">
+                <div class="center_top_top">
+                    <form>
+                        <div><spans style="font-size: 20px;color: white;font-weight: bold">闲置物品类型:</spans><select class="wplx"><option>---请选择---</option><option>生活用品</option><option>学习用品</option><option>娱乐用品</option></select></div>
+                        <div><span  style="margin-top:5px;font-size: 20px;color: white;font-weight: bold;margin-left: 60px">关键字:</span><input type="text" name="key" class="keys"></div>
+                        <div>
+                            <span style="margin-top:1px;font-size: 20px;color: white;font-weight: bold;margin-left: 40px">时间跨度:</span><input type="text" class="ui-datepicker-time"  readonly value="" />
+                            <div class="ui-datepicker-css">
+                                <div class="ui-datepicker-quick">
+                                    <p>快捷日期<a class="ui-close-date">X</a></p>
+                                    <div>
+                                        <input class="ui-date-quick-button" type="button" value="今天" alt="0"  name=""/>
+                                        <input class="ui-date-quick-button" type="button" value="昨天" alt="-1" name=""/>
+                                        <input class="ui-date-quick-button" type="button" value="7天内" alt="-6" name=""/>
+                                        <input class="ui-date-quick-button" type="button" value="14天内" alt="-13" name=""/>
+                                        <input class="ui-date-quick-button" type="button" value="30天内" alt="-29" name=""/>
+                                        <input class="ui-date-quick-button" type="button" value="60天内" alt="-59" name=""/>
+                                    </div>
+                                </div>
+                                <div class="ui-datepicker-choose">
+                                    <p>自选日期</p>
+                                    <div class="ui-datepicker-date">
+                                        <input name="startDate" id="startDate" class="startDate" readonly value="2014/12/20" type="text">
+                                        -
+                                        <input name="endDate" id="endDate" class="endDate" readonly  value="2014/12/20" type="text" disabled onchange="datePickers()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float: left;"><span style="font-size: 25px;font-weight: bold">我们</span>为您查询到  <span style="color: red; font-size: 25px" class="num"></span> 条数据</div>
+                            <div style="float: left;width: 40px;margin-left: 150px"><input class="submit" type="button" value="搜索" style="width: 100px"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="center_top_button"><img src="index/img/buy.png"></div>
+            </div>
+            <div class="center_button">
+                <table style="width:630px; ">
+                    <thead>
+                    <tr>
+                        <th>序号</th><th>发布人</th><th>发布物品</th><th>意向交换物品</th><th>物品类型</th><th>查看详情</th><th>联系我们</th>
+                    </tr>
+                    </thead>
+                    <tbody class="list"></tbody>
+                </table>
+            </div>
+            <div class="page1">
+                <div id="page" class="page_div"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_top">
+                <div class="text4">
+                    <div><img src="index/img/paobu.jpg" style="height: 55px;float: left"></div>
+                    <div style="margin-left: 10px;font-size: 45px; float: left">   图片轮播.....</div>
+                </div>
+                <div class="faceImg"></div>
+            </div>
+            <div class="right_button">
+                <div class="text4">
+                    <div><img src="index/img/paobu.jpg" style="height: 55px;float: left"></div>
+                    <div style="margin-left: 10px;font-size: 45px; float: left">   交易状态.....</div>
+                </div>
+                <div id="main2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="button"><img src="index/img/button.png" style="width: 100%;height: 100px"></div>
+
+    <!--物品详情-->
+    <div class="wp_detail">
+        <div class="wp_detail_top">
+            <div class="wp_detail_left" style="float: left">
+                <input type="hidden" class="user_xh">
+                <input type="hidden" class="topic_xh">
+                <div class="list_name" style="font-size: 25px;font-weight: bold">发布人:<span class="user_name"></span></div>
+                <div class="list_name">上传物品：<span class="scwp"></span> </div>
+                <div class="list_name">意向交换物品：<span class="yxjhwp"></span></div>
+                <div class="list_name">上传地点：<span class="scdd"></span> 物品类型：<span class="lx"></span></div>
+                <div class="list_name">交易状态: <span class="jyzt" style="color: red;"></span>上传时间:<span class="scsj" ></span></div>
+            </div>
+            <div class="wp_detail_right" style="float: right;">
+                <div style=" float: right;margin-right: 5px;cursor: pointer" class="del">
+                    <img src="tribune/img/delete.png">
+                </div>
+                <div>
+                    <img class="img" style="margin-right:35px;margin-top:10px;border:2px solid white;width: 200px;height: 250px" src="">
+                </div>
+            </div>
+        </div>
+        <div class="wp_detail_button" style="float:left;">
+            备注：<span class="wpms"></span>
+        </div>
+    </div>
+
+    <!--留言框-->
+    <div class="lyk">
+        <input type="hidden" class="lyk_userXh">
+        <input type="hidden" class="lyk_topicXh">
+        <div class="del_lyk">
+            <img src="tribune/img/delete.png" style="float: right;cursor: pointer">
+        </div>
+        <div class="middle_lyk">
+            <div style="float: left"><img src="index/img/kefu.png"></div>
+            <div style="float: left;height: 40px;margin-top: 30px;margin-left: 50px"><span style="margin-top: 40px">亲，如果愿意交换的话，请给我留言-_-</span></div>
+        </div>
+        <div class="content_lyk">
+            <textarea style="width: 595px" class="lynr">
+            </textarea>
+        </div>
+        <div class="dj_lyk" style="float: right;cursor:pointer">
+            <img src="index/img/ly.png">
+        </div>
+    </div>
+</div>
+</body>
+<script src="index/js/jquery-1.11.3.min.js"></script>
+
+<script src="index/js/paging.js"></script>
+<script src="index/js/data.js"></script>
+<script src="top/js/top.js"></script>
+<script src="index/js/scroll.js"></script>
+<script src="echarts/echarts.min.js"></script>
+<script src="index/layer/layer.js"></script>
+<script src="index/js/vmc.slider.full.min.js"></script>
+<!-- 分页插件-->
+
+
+<!--日期插件-->
+<script src="index/js/jquery-ui-1.9.2.custom.js" type = "text/javascript" language="javascript"></script>
+<script src="index/js/share.js" type = "text/javascript"></script>
+<script>
+    $('.myscroll').myScroll({
+        speed: 20, //数值越大，速度越慢
+        rowHeight: 70 //li的高度
+    });
+</script>
+<script src="index/js/index.js"></script>
+<script>
+    $('.head').load("top.html")
+</script>
+</html>

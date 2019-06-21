@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宿州学院闲置物品交易商城</title>
+    <link rel="stylesheet" href="home/css/home.css">
+</head>
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<style>
+    table tbody {
+        text-align: center;
+        width:1339px;
+        display:block;
+        overflow-y:scroll;
+        height: 500px;
+    }
+    table thead,th tbody tr {
+        display:table;
+        table-layout:fixed;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="head"></div>
+    <div class="middle">
+        <!--图片位置-->
+        <div class="top_3">
+            <img src="tribune/img/school.png" style="height: 120px; margin-top:16px;width:1460px;margin-left: 20px">
+        </div>
+        <div class="top_4">
+            <div style="float: left"><img src="tribune/img/title.png" style="width:50px;height: 50px"></div>
+            <div class="test">用户：<span class="num1"></span>      |       我发的帖子：<span class="num2"></span>        |       我回的帖子：<span class="num3"></span> </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="info" id="info1" style="cursor: pointer;">基本信息</div>
+            <div class="info" id="info2" style="cursor: pointer;">我上传的闲置物品</div>
+            <div class="info" id="info3" style="cursor: pointer;">我发的主题</div>
+            <div class="info" id="info4" style="cursor: pointer;">我回的帖子</div>
+            <div class="info" id="info5" style="cursor: pointer;">我的留言</div>
+        </div>
+        <div class="right">
+            <div class="right_top">
+                <div class="upload" style="float: left;margin-left: 1150px;cursor: pointer;"><img src="home/img/upload.png"></div>
+                <div class="excel" style="float: left;margin-left: 60px;cursor: pointer;"><a class="excel" href=""><img src="home/img/excel.png" class="aimg"></a></div>
+            </div>
+            <div class="right_button" style="margin-top: 20px">
+                <table>
+                    <thead><th>序号</th><th>闲置物品</th><th style="width:470px">物品描述</th><th>物品类型</th><th style="width: 200px">意向交换物品</th><th>上传地点</th><th style="width: 230px">交易状态</th><th>上传时间</th></thead>
+                    <tbody class="homeList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="button"><img src="index/img/button.png" style="width: 100%;height: 100px"></div>
+
+
+    <!--上传物品框-->
+    <form id="form2">
+    <div class="wp_detail">
+        <div class="wp_detail_top">
+            <div class="wp_detail_left" style="float: left">
+                <input type="hidden" name="user_xh" class="xh">
+                <div class="list_name">上传物品：<input type="text" name="scwp" style="margin-left: 40px" class="text1"></div>
+                <div class="list_name">物品类型：<select name="wplx" style="margin-left: 40px" class="text2"><option>娱乐用品</option><option>生活用品</option><option>学习用品</option></select></div>
+                <div class="list_name">意向交换物品：<input type="text" name="yxjhwp" class="text3"></div>
+                <div class="list_name">上传地点：<input type="text" name="scdd" style="margin-left: 40px" class="text4"></div>
+                <div class="list_name">上传物品描述：<textarea style="width:250px;height: 30px" name="wpms" class="text5"></textarea> </div>
+            </div>
+            <div class="wp_detail_right" style="float: left">
+                <input type="file" name="file" class="text6">
+            </div>
+        </div>
+        <div class="wp_detail_button" style="float:left;">
+            备注:
+            <textarea style="width:790px;height: 210px" name="bz" class="text7"></textarea>
+        </div>
+        <div><input type="reset" style="float: left;width: 60px;height: 45px"></div>
+        <div class="wp_button" style="float:left;"><img src="home/img/button.png" style="cursor: pointer;"></div>
+        <div><img src="tribune/img/delete.png" class="del" style="float: right;cursor: pointer;"></div>
+    </div>
+    </form>
+</div>
+</body>
+<script src="index/js/jquery-3.2.1.min.js"></script>
+<script src="top/js/top.js"></script>
+<script src="home/js/home.js"></script>
+<script>
+    $('.head').load("top.html");
+</script>
+</html>

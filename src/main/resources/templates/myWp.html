@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="home/css/home.css">
+<style>
+    table tbody {
+        text-align: center;
+        width:1339px;
+        display:block;
+        overflow-y:scroll;
+        height: 500px;
+    }
+    table thead,th tbody tr {
+        display:table;
+        table-layout:fixed;
+    }
+</style>
+<body>
+    <div class="right_top">
+        <div class="upload" style="float: left;margin-left: 950px;cursor: pointer;"><img src="home/img/upload.png"></div>
+        <div class="excel" style="float: left;margin-left: 80px;cursor: pointer;"><img src="home/img/excel.png"></div>
+    </div>
+    <div class="right_button" style="margin-top: 20px">
+        <table>
+            <thead><th>序号</th><th>闲置物品</th><th>物品描述</th><th>物品类型</th><th>意向交换物品</th><th>上传地点</th><th>上传时间</th></thead>
+            <tbody class="homeList"></tbody>
+        </table>
+    </div>
+</body>
+<script src="index/js/jquery-3.2.1.min.js"></script>
+<script src="home/js/home.js"></script>
+</html>

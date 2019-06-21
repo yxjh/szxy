@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宿州学院闲置物品交易商城</title>
+    <link rel="stylesheet" href="login/css/login.css">
+</head>
+<body>
+<div class="htmleaf-container">
+    <!--头部位置-->
+    <div class="head">
+
+    </div>
+    <div id="wrapper" class="login-page">
+        <div id="login_form" class="form">
+            <form class="register-form">
+                <input type="text" placeholder="用户名" id="r_user_name"/>
+                <input type="password" placeholder="密码" id="r_password" />
+                <input type="text" placeholder="电子邮件" id="r_emial"/>
+                <button id="create">创建账户</button>
+                <p class="message">已经有了一个账户? <a href="#">立刻登录</a></p>
+            </form>
+            <form class="login-form">
+                <span class="msg" style="color: red"></span>
+                <input type="text" placeholder="用户名" id="user_name"/>
+                <input type="password" placeholder="密码" id="password"/>
+                <button id="login">登　录</button>
+                <p class="message">还没有账户? <a href="#">立刻创建</a></p>
+            </form>
+        </div>
+    </div>
+    <div class="button"><img src="login/img/button.png" style="width: 100%;height: 100px; border: 1px solid silver;"></div>
+</div>
+
+<script src="index/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="top/js/top.js"></script>
+<script src="login/js/login.js"></script>
+<script>
+    $('.head').load("top.html")
+</script>
+<script type="text/javascript">
+    function check_login()
+    {
+        var name=$("#user_name").val();
+        var pass=$("#password").val();
+        if(name=="sc.chinaz.com" && pass=="sc.chinaz.com")
+        {
+            alert("登录成功！");
+            $("#user_name").val("");
+            $("#password").val("");
+
+        }
+        else
+        {
+            $("#login_form").removeClass('shake_effect');
+            setTimeout(function()
+            {
+                $("#login_form").addClass('shake_effect')
+            },1);
+        }
+    }
+    function check_register(){
+        var name = $("#r_user_name").val();
+        var pass = $("#r_password").val();
+        var email = $("r_email").val();
+        if(name!="" && pass=="" && email != "")
+        {
+            alert("注册成功！");
+            $("#user_name").val("");
+            $("#password").val("");
+        }
+        else
+        {
+            $("#login_form").removeClass('shake_effect');
+            setTimeout(function()
+            {
+                $("#login_form").addClass('shake_effect')
+            },1);
+        }
+    }
+    $(function(){
+        $("#create").click(function(){
+            check_register();
+            return false;
+        })
+        $("#login").click(function(){
+            check_login();
+            return false;
+        })
+        $('.message a').click(function () {
+            $('form').animate({
+                height: 'toggle',
+                opacity: 'toggle'
+            }, 'slow');
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宿州学院闲置物品交易商城</title>
+    <link rel="stylesheet" href="top/css/top.css">
+    <link rel="stylesheet" href="index/css/paging.css">
+</head>
+<body>
+    <!--头部位置-->
+    <div class="top">
+        <div class="title"><img src="index/img/logo.png"></div>
+        <div class="time">
+            <div><img src="index/img/sun.jpg" style="width:50px;height: 50px;float: left;margin-left: 150px"></div>
+            <div class="time1">
+                <span class="topYear"></span>
+                <span class="topTime titleStyle"></span>
+            </div>
+            <div class="time2">
+                <script>
+                    if(localStorage.getItem("name")==null){
+                        var html='<a href="login.html">你好，请登陆</a> <a href="login.html" style="color: red">免费注册</a>|<a href="index.html">首页</a>|<a href="tribune.html">论坛</a>|<a href="login.html" class="exit">退出</a>'
+                        $('.time2').html(html);
+                    }else{
+                        var html='<a href="#" style="margin-right: 20px">欢迎你，<span class="name"></span></a>                   <a href="index.html" style="margin-right: 10px">首页</a>|<a href="tribune.html" style="margin-right: 10px;margin-left: 10px">论坛</a>|<a href="home.html" style="margin-right: 10px;margin-left: 10px">我的</a>|<a style="margin-right: 10px;margin-left: 10px" href="login.html" class="exit">退出</a>'
+                        $('.time2').html(html);
+                    }
+                </script>
+
+            </div>
+        </div>
+        <div class="dtu"><img src="index/img/head.gif" style="width:500px;height: 85px"></div>
+    </div>
+
+</body>
+<script src="index/js/jquery-3.2.1.min.js"></script>
+<script src="index/js/paging.js"></script>
+<script src="top/js/top.js"></script>
+<script>
+    $('.name').text(localStorage.getItem("name"))
+</script>
+</html>
